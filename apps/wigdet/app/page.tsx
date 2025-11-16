@@ -12,5 +12,10 @@ interface Props {
 export default function Page({ searchParams }: Props) {
   const { organizationId } = use(searchParams);
 
-  return <WidgetView ordanizationId={organizationId} />;
+  return (
+    <>
+      apps/widget
+      <WidgetView ordanizationId={organizationId} />;
+    </>
+  );
 }
